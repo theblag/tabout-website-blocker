@@ -25,23 +25,17 @@ git clone https://github.com/your-username/tabout.git
 cd tabout
 ```
 
----
-
 ### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
----
-
 ### 3. Build the Extension
 
 ```bash
 npm run build
 ```
-
----
 
 ### 4. Load into Chrome
 
