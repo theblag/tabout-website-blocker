@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Website Blocker",
+  "version": "1.0",
+  "description": "Blocks websites during your most productive hours by learning your browsing habits.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "public/popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "blocked-bg.jpg"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
